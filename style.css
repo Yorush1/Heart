@@ -1,0 +1,185 @@
+body {
+  background-image: url('flower1.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Georgia', serif;
+  color: #5d3f24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+.envelope {
+  position: relative;
+  width: 600px;
+  height: 350px;
+  background-color: #fff;
+  border: 2px solid #f9c8b1;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.envelope-flap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #f9c8b1;
+  border-radius: 10px;
+  z-index: 1;
+  transition: transform 0.6s ease;
+}
+
+.envelope-flap.top {
+  transform-origin: top;
+  top: -100%;
+}
+
+.envelope-flap.bottom {
+  transform-origin: bottom;
+  bottom: 100%;
+}
+
+.envelope-body {
+  position: relative;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  height: 100%;
+  display: none;
+}
+
+.letter {
+  padding: 30px;
+  padding-bottom: 80px;
+  height: calc(100% - 20px);
+  overflow-y: auto;
+  font-size: 1.1em; 
+  line-height: 1.6em;
+}
+
+
+
+.envelope-body.open {
+  display: block;
+}
+
+.envelope-flap.top.open {
+  transform: rotateX(-180deg) translateY(-100%);
+}
+
+.envelope-flap.bottom.open {
+  transform: rotateX(180deg) translateY(100%);
+}
+
+.open-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #c68e91;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.open-button:hover {
+  background-color: #b77a7d;
+}
+
+.open-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #c68e91;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.open-button:hover {
+  background-color: #b77a7d;
+}
+
+
+.heart {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #73a173;
+  transform: rotate(-45deg);
+  border-radius: 50% 50% 0 0;
+  animation: fadeOut 2s linear forwards;
+  pointer-events: none;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #73a173;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -5px;
+  left: 0;
+}
+
+.heart::after {
+  left: 5px;
+  top: 0;
+}
+
+@keyframes fadeOut {
+  to {
+      transform: translateY(-20px) scale(0.5);
+      opacity: 0;
+  }
+}
+
+.love {
+  position: absolute;
+  font-size: 24px; 
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+
+.love {
+  position: absolute;
+  font-size: 24px; 
+  animation: fall linear infinite;
+  pointer-events: none;
+  opacity: 0; 
+}
+
+@keyframes fall {
+  0% {
+      transform: translateY(0);
+      opacity: 0;
+  }
+  10% {
+      opacity: 1; 
+  }
+  90% {
+      opacity: 1; 
+  }
+  100% {
+      transform: translateY(100vh); 
+      opacity: 0; 
+  }
+}

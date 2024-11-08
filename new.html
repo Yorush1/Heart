@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hearts-container"></div>
+    <div class="center-text">I love you for who you are.</div>
+
+    <script>
+        function createHeart() {
+          const heart = document.createElement('div');
+          heart.classList.add('heart');
+          document.querySelector('.hearts-container').appendChild(heart);
+      
+          const leftPosition = Math.random() * 100;
+      
+          heart.style.left = `${leftPosition}vw`;
+          heart.style.animationDuration = `${Math.random() * 3 + 4}s`;
+          heart.style.animationDelay = `${Math.random() * 2}s`;
+
+          setTimeout(() => {
+            heart.remove();
+          }, (Math.random() * 3 + 4) * 1000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+      
+                  
+</body>
+</html>

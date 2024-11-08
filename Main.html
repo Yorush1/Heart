@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Love Letter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a background>
+    <div class="envelope" id="envelope">
+        <div class="envelope-flap top" id="topFlap"></div>
+        <div class="envelope-body" id="envelopeBody">
+            <div class="letter">
+                <h1>Dear Shen.</h1>
+                <p>I want to convey my feelings for you using this letter.</p>
+                <p>I want to tell you how it started.
+                <p>It started when naging magkagroup tayo. When you approached me about our acting and talked to me, your voice really soothed me and calmed me for some reason.</p>
+                <p>When the groupings ended i was kinda sad because i can't find the reason to talk to you anymore, and im kind of a socially awkward person so i found it really hard to approach you and have a normal talk with you.</p>
+                <p>And eventually i started catching my self always looking at you. I started to question myself on why im looking at you, and for some reason a thought came across my mind saying "Do i like her?"
+                I rejected that thought and tried to focus on my school works, but that thought never exited my mind. I was scared, im not gonna lie. Because i never wanted to fall in love again after getting rejected so many times.
+                And around half a month ago i opened up to arlan and marion about it. They told me that i was in love, well i was shocked that they said that. And scared at the same time, because falling in love with someone is really hard for me because of my looks and insecurities, and i didn't have the energy to fall inlove again. They told me it was so obvious that i was inlove, but i kept rejecting them saying "Pre 'di ako inlove".
+                And one day may naalala ako about sa groupings so oral com, wala naman ako ibang mapagtanungan about it because busy sila marion, so i mustered up the courage to ask you about it.</p>
+                <p>And eventually kinulit kita about it, haha sorry for annoying you. But im glad i chatted you that day, because otherwise i wouldn't be madly in love right now.
+                I never actually thought na i would be in love right now, because i prayed to god about it. To let me give up on love because at that time i can't really find any girl that would love me for who i am and accept everything about me, other than my mom.
+                But now here i am, madly in love with you. The thing that really shocked me was that one night i found myself praying to god for you to be the one. I want you to be the one to spend enternity with me together, to be with me on highs and lows.
+                I want to keep supporting you on whatever you do and be there for you no matter what. I'll fight for our love. I never want love another woman, unless it's you. Because of you, i started to believe in love again, because of you my days become brighter than even. And everything seem's more fun than even with you.
+                Everytime i get to see you, i get so excited that my heart could burst just by looking at you.</p>
+                <p>I find it really hard to pin point the reason on why i love you. So i prayed to god about it. And he gave me an answer.
+                I love you because you are you, you are special to me. No other woman or person can replace you, the love i feel for you is something so special that i can't explain it with just mere words.
+                I want to show my love for you with not just words, but with actions. I want to make you feel special, because you are special. I want to show you how important you are to me and i want to pursue you no matter what. So please shen, let me show how much i love you and how very important you are to me. I know im kinda awkward sa personal but i'll do my best not to be.
+                I want to ask you something, i know you have strict parents but im willing to meet with you parents. Shen would you love to go out with me?
+                I know in order to go on dates with you i would have to ask you parents for permission. And i don't mind, yes im scared but im willing to face my fears in order to be with you. I want to learn more about you, i want to know the things you love and hate. I want to go on dates with you. And after some time i would like to meet with your parents again. Why? i want to ask them permission to let me court you.
+                Shen im serious about this. I have never felt anything like this before, and i don't want to let it go to waste. I'm willing to change for you. I want us to grow together. I'm willing to communicate like adults in order to fix any issues. I will always be by your side no matter what. I love you shen.</p>
+                <p>Forever yours,<br>Yvan.</p>
+            </div>
+        </div>
+        <div class="envelope-flap bottom" id="bottomFlap"></div>
+    </div>
+    <button class="open-button" onclick="openEnvelope()">Open Envelope</button>
+    
+    <button class="open-button" onclick="openSurprise()">Open for a Surprise</button>
+
+    <script>
+        function openSurprise() {
+          window.location.href = 'new.html';
+        }
+    </script>
+      
+
+    <script>
+        function openEnvelope() {
+            const envelopeBody = document.getElementById('envelopeBody');
+            const topFlap = document.getElementById('topFlap');
+            const bottomFlap = document.getElementById('bottomFlap');
+            envelopeBody.classList.toggle('open');
+            topFlap.classList.toggle('open');
+            bottomFlap.classList.toggle('open');
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
